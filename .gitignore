@@ -5,5 +5,4 @@ node_modules
 # file exclude 
 gulpfile.js
 *.txt
-*.md
 .env
