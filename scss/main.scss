@@ -1,9 +1,182 @@
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
+$border-radius: 0.2rem;
+$accent: tomato;
+$danger: $accent;
+$primary: #303E54;
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
 
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #f1f1f1;
+  font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+.btn-danger {
+  color: rgba(255, 255, 255, 0.911);
+  &:hover, &:active, &:focus {
+    color: $white;
+  }
+}
+.btn-link {
+  text-decoration: none;
+  padding: 0 0 3px;
+  border: 0;
+  @extend .border-bottom;
+  border-color: transparent !important;
+  transition: all 0.2s;
+  &:hover {
+    @extend .border-bottom;
+    @extend .border-info;
+  }
+}
+.bg-black-50 {
+  background-color: rgba($color: #000000, $alpha: 0.5);
+}
+
+.text-accent {
+  color: $accent;
+}
+
+.container {
+  max-width: 1220px !important;
+}
+
+.btn-outline-danger:hover {
+  color: $white;
+}
+
+.navbar {
+  .searchForm {
+      position: static;
+      @media screen and (min-width: 768px) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+  }
+  .hideMenu {
+   opacity: 1;
+   transition: opacity 0.2s;
+   @media screen and (min-width: 768px) {
+     opacity: 0 !important;
+ }
+
+ }
+  .dropdown-item {
+    transition: all 0.2s;
+  }
+
+  .dropdown-menu {
+    animation: slideDown 0.3s ease;
+  }
+
+  .nav-link:hover,
+  .active,
+  .active .nav-link,
+  .nav-link:focus,
+  .dropdown-item:hover {
+    color: $danger;
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item.active {
+    background: $light;
+    @extend .ps-4;
+  }
+}
+.todayHoliday {
+  &::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 50%;
+  }
+  &::-webkit-scrollbar-track {
+    background: $light;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $secondary-bg-subtle;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: $danger;
+  }
+}
+
+.carousel {
+  .carousel-item {
+    max-height: 400px;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    height: 50px !important;
+    top: 50%;
+    margin-top: -25px;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+  }
+}
+
+.todayHoliday {
+  a {
+    transition: all 0.2s;
+    &:hover {
+      text-decoration: underline;
+      color: $danger;
+    }
+  }
+}
+
+// month section here
+.month {
+  .month__item {
+    @extend .shadow-sm;
+    height: 150px;
+    background-size: cover;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      transform: translateY(-10px);
+      @extend .shadow;
+    }
+
+    p {
+      background-color: rgba(0, 0, 0, 0.3);
+      text-shadow: 2px 2px 1px rgba($color: #000000, $alpha: 0.9);
+    }
+  }
+}
+
+.reviews,
+.gifts {
+  .h5 {
+    font-weight: 600;
+  }
+  img {
+    aspect-ratio: 7 / 4;
+    object-fit: cover;
+  }
 }
