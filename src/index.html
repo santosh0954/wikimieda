@@ -6,43 +6,48 @@
     <title>WikiMieda | A blog site</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
-      rel="stylesheet" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+                                          rel="stylesheet" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet">
     <link rel="stylesheet" href="css/main.css" />
     </head>
   <body class="bg-white">
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-primary shadow-sm mb-3">
+      <nav class="navbar navbar-expand-md navbar-dark bg-primary shadow-sm mb-3 fw-semibold">
         <div class="container-fluid container justify-content-between">
-          <a class="navbar-brand fw-bold" href="./"><span class="text-danger">Wiki</span>mieda</a>
+          <a class="navbar-brand fw-bold fs-4" href="./"><span class="text-danger">Wiki</span>mieda</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-uppercase menu">
+            <ul class="navbar-nav small mx-auto mb-2 mb-lg-0 text-uppercase menu">
               <li class="nav-item">
-                <a class="nav-link" href="#">Today</a>
+                <a class="nav-link" href="./post.html">Today</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="./post.html" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false">
                   Birthday
                   <i class="fa fa-chevron-down fw-light"></i>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">January</a></li>
-                  <li><a class="dropdown-item" href="#">February</a></li>
-                  <li><a class="dropdown-item" href="#">March</a></li>
-                  <li><a class="dropdown-item" href="#">April</a></li>
-                  <li><a class="dropdown-item" href="#">May</a></li>
-                  <li><a class="dropdown-item" href="#">Jun</a></li>
-                  <li><a class="dropdown-item" href="#">July</a></li>
-                  <li><a class="dropdown-item" href="#">August</a></li>
-                  <li><a class="dropdown-item" href="#">September</a></li>
-                  <li><a class="dropdown-item" href="#">October</a></li>
-                  <li><a class="dropdown-item" href="#">November</a></li>
-                  <li><a class="dropdown-item" href="#">December</a></li>
+                  <li><a class="dropdown-item" href="./post.html">January</a></li>
+                  <li><a class="dropdown-item" href="./post.html">February</a></li>
+                  <li><a class="dropdown-item" href="./post.html">March</a></li>
+                  <li><a class="dropdown-item" href="./post.html">April</a></li>
+                  <li><a class="dropdown-item" href="./post.html">May</a></li>
+                  <li><a class="dropdown-item" href="./post.html">Jun</a></li>
+                  <li><a class="dropdown-item" href="./post.html">July</a></li>
+                  <li><a class="dropdown-item" href="./post.html">August</a></li>
+                  <li><a class="dropdown-item" href="./post.html">September</a></li>
+                  <li><a class="dropdown-item" href="./post.html">October</a></li>
+                  <li><a class="dropdown-item" href="./post.html">November</a></li>
+                  <li><a class="dropdown-item" href="./post.html">December</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -94,12 +99,12 @@
                 <a class="nav-link" href="#">Create a Holiday</a>
               </li>
             </ul>
-            <div class="d-flex justify-content-end">
-              <a href="./login.html" class="btn btn-outline-danger border-1 px-3 rounded-pill me-2">Login</a>
-              <form class="searchForm input-group end-0 me-5 d-none overflow-hidden" role="search" id="search-input"
-                style="max-width: 500px">
+            <div class="d-flex justify-content-end flex-column flex-md-row align-items-end align-items-lg-center">
+              <a href="./login.html" class="btn order-0 btn-outline-danger border-1 px-3 rounded-pill me-2 mb-2 mb-md-0">Login</a>
+              <form class="searchForm input-group end-0 me-md-5 d-none overflow-hidden order-2 order-md-1" role="search"
+                id="search-input">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn bg-white" type="submit">
+                <button class="btn bg-white order-1 order-md-2" type="submit">
                   <i class="fa fa-search"></i>
                 </button>
               </form>
@@ -114,14 +119,14 @@
     <main class="container pb-5">
       <section class="row mb-5 g-3">
         <!-- carousel section start -->
-        <div class="col-md-8">
+        <div class="col-md-7 col-lg-8">
           <section id="carouselMain" class="carousel slide">
             <div class="carousel-inner shadow-sm rounded overflow-hidden">
               <div class="carousel-item active h-100">
                 <img src="./img/national-goof-off-day-1200x834.jpg.webp" class="d-block w-100 object-fit-cover"
                   alt="carousel image" />
-                <div class="carousel-caption d-none d-sm-flex justify-content-center align-items-center">
-                  <h5 class="text-uppercase fs-3 fw-bold">
+                <div class="carousel-caption d-flex justify-content-center align-items-center">
+                  <h5 class="text-uppercase fs-3 fw-bold px-4 px-lg-2">
                     Independent accomdation day
                   </h5>
                   <span
@@ -138,8 +143,8 @@
               </div>
               <div class="carousel-item h-100">
                 <img src="./img/national-goof-off-day-1200x834.jpg.webp" class="d-block w-100" alt="carousel image" />
-                <div class="carousel-caption d-none d-sm-flex justify-content-center align-items-center">
-                  <h5 class="text-uppercase fs-3 fw-bold">
+                <div class="carousel-caption d-flex justify-content-center align-items-center">
+                  <h5 class="text-uppercase fs-3 fw-bold px-4 px-lg-2">
                     Independent accomdation day
                   </h5>
                   <span
@@ -156,8 +161,8 @@
               </div>
               <div class="carousel-item h-100">
                 <img src="./img/national-goof-off-day-1200x834.jpg.webp" class="d-block w-100" alt="carousel image" />
-                <div class="carousel-caption d-none d-sm-flex justify-content-center align-items-center">
-                  <h5 class="text-uppercase fs-3 fw-bold">
+                <div class="carousel-caption d-flex justify-content-center align-items-center">
+                  <h5 class="text-uppercase fs-3 fw-bold px-4 px-lg-2">
                     Independent accomdation day
                   </h5>
                   <span
@@ -184,7 +189,7 @@
           </section>
         </div>
         <!-- carousel section end -->
-        <div class="col-md-4 bg-white rounded shadow-sm p-0 rounded position-relative overflow-hidden todayHoliday"
+        <div class="col-md-5 col-lg-4 bg-white rounded shadow-sm p-0 rounded position-relative overflow-hidden todayHoliday"
           style="min-height: 70px;">
           <div class="bg-danger text-white p-2 mb-2 d-none d-md-block">
             <h4 class="text-center fw-medium mb-0">Today’s holidays</h4>
@@ -196,42 +201,42 @@
                   <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="post image"
                     style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
                 </span>
-                <a href="" class="stretched-link ms-lg-3 fw-semibold"> AUTISM ACCEPTANCE WEEK </a>
+                <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold"> AUTISM ACCEPTANCE WEEK </a>
               </li>
               <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
                 <span>
                   <img src="./img/posts/17-Year-Olds-min-629x360.png.webp" alt="post image"
                     style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
                 </span>
-                <a href="" class="stretched-link ms-lg-3 fw-semibold"> AMERICAN RED CROSS GIVING DAY </a>
+                <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold"> AMERICAN RED CROSS GIVING DAY </a>
               </li>
               <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
                 <span>
                   <img src="./img/posts/20-Year-Olds-min-629x360.png.webp" alt="post image"
                     style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
                 </span>
-                <a href="" class="stretched-link ms-lg-3 fw-semibold"> CELEBRATE EXCHANGE DAY </a>
+                <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold"> CELEBRATE EXCHANGE DAY </a>
               </li>
               <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
                 <span>
                   <img src="./img/posts/4-Year-Old-Boys-1-629x360.png.webp" alt="post image"
                     style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
                 </span>
-                <a href="" class="stretched-link ms-lg-3 fw-semibold">HOLY WEDNESDAY </a>
+                <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold">HOLY WEDNESDAY </a>
               </li>
               <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
                 <span>
                   <img src="./img/posts/8-Year-Old-Girls-min-629x360.png.webp" alt="post image"
                     style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
                 </span>
-                <a href="" class="stretched-link ms-lg-3 fw-semibold"> INTERNATIONAL WHISKEY DAY </a>
+                <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold"> INTERNATIONAL WHISKEY DAY </a>
               </li>
               <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
                 <span>
                   <img src="./img/posts/9-Year-Old-Boys-min-629x360.png.webp" alt="post image"
                     style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
                 </span>
-                <a href="" class="stretched-link ms-lg-3 fw-semibold"> LITTLE RED WAGON DAY </a>
+                <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold"> LITTLE RED WAGON DAY </a>
               </li>
             </ul>
           </section>
