@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WikiMieda | A blog site</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="./img/favicons/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
@@ -21,7 +25,7 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-primary shadow-sm mb-3 fw-semibold">
       <div class="container-fluid container justify-content-between">
-        <a class="navbar-brand fw-bold fs-4" href="./"><span class="text-danger">Wiki</span>mieda</a>
+        <a class="navbar-brand fw-bold fs-4" href="./"><span class="text-danger">Wikki</span>media</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -119,7 +123,7 @@
       </div>
     </nav>
   </header>
-  <main class="container pb-5">
+  <main class="container pb-5" data-bs-spy="scroll" data-bs-target="#pageMenu">
     <!-- get idea section  -->
     <section
       class="alert alert-primary col-md-7 col-lg-8 d-flex align-items-center text-primary fw-medium shadow-sm flex-wrap">
@@ -128,7 +132,7 @@
       <a href="#" class="btn bg-white border-primary-subtle text-danger ms-auto rounded-pill px-3 submitIdea">Submit Now
       </a>
     </section>
-    <div class="row align-items-start mb-4">
+    <div class="row align-items-start mb-4 mb-md-0">
       <section class="col-md-7 col-lg-8">
         <!-- post banner section start  -->
         <div class="d-flex flex-column shadow-sm rounded overflow-hidden mb-4">
@@ -150,30 +154,30 @@
             </span>
           </div>
           <div class="px-2 py-2">
-            <ul class="nav fw-medium na page-menu small flex-nowrap">
+            <ul class="nav fw-medium na page-menu small flex-nowrap" id="pageMenu">
               <li class="nav-item">
-                <a href="#" class="nav-link">History</a>
+                <a href="#history" class="nav-link">History</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Timeline</a>
+                <a href="#timeline" class="nav-link">Timeline</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">FAQ'S</a>
+                <a href="#faq" class="nav-link">FAQ'S</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Importants</a>
+                <a href="#importants" class="nav-link">Importants</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Celebrate</a>
+                <a href="#celebrate" class="nav-link">Celebrate</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Traditions</a>
+                <a href="#traditions" class="nav-link">Traditions</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Related</a>
+                <a href="#related" class="nav-link">Related</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Stats</a>
+                <a href="#stats" class="nav-link">Stats</a>
               </li>
             </ul>
           </div>
@@ -181,68 +185,95 @@
         </div>
         <!-- post banner section end  -->
       </section>
-      <section class=" col-md-5 col-lg-4 bg-white rounded shadow-sm p-0 rounded position-relative overflow-hidden
-        todayHoliday" style="min-height: 70px;">
-        <div class="bg-danger text-white p-2 mb-2 d-none d-md-block">
-          <h4 class="text-center fw-medium mb-0">Today’s holidays</h4>
-        </div>
-        <section class="bg-light mx-2 p-1 overflow-y-auto d-none d-md-block todayHoliday flex-grow-2">
+      <section class="col-md-5 col-lg-4 bg-white rounded shadow-sm p-0 rounded position-relative overflow-hidden"
+        style="min-height: 70px;">
+        <!-- calendar section start  -->
+        <section class=" p-2 mb-5 mb-md-0">
+          <div class="calendar_wrapper p-3 rounded">
+            <header class="d-flex justify-content-between align-items-center pb-3">
+              <p class="fw-medium fs-4 mb-0"></p>
+              <div class="icons btn-group btn-group-sm">
+                <button id="prev" class="btn btn-light rounded-start-pill">
+                  <i class="fa fa-chevron-left"></i>
+                </button>
+                <button id="next" class="btn btn-light ms-1 rounded-end-pill">
+                  <i class="fa fa-chevron-right"></i>
+                </button>
+              </div>
+            </header>
+            <div class="calendar">
+              <ul class="weeks fw-medium text-uppercase">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+              </ul>
+              <ul class="days">
+            
+              </ul>
+            </div>
+            </div>
+            </section>
+            <!-- calendar section end  -->
+            <section class="bg-light mx-2 p-1 overflow-y-auto d-none d-md-block todayHoliday" style="height: 266px;">
           <ul class="list-group list-group-flush small">
             <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
               <span>
                 <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="post image"
                   style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
               </span>
-              <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold"> AUTISM ACCEPTANCE WEEK </a>
+              <a href="" class=" ms-2 ms-lg-3 fw-semibold"> AUTISM ACCEPTANCE WEEK </a>
             </li>
             <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
               <span>
                 <img src="./img/posts/17-Year-Olds-min-629x360.png.webp" alt="post image"
                   style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
               </span>
-              <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold"> AMERICAN RED CROSS GIVING DAY </a>
+              <a href="" class=" ms-2 ms-lg-3 fw-semibold"> AMERICAN RED CROSS GIVING DAY </a>
             </li>
             <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
               <span>
                 <img src="./img/posts/20-Year-Olds-min-629x360.png.webp" alt="post image"
                   style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
               </span>
-              <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold"> CELEBRATE EXCHANGE DAY </a>
+              <a href="" class=" ms-2 ms-lg-3 fw-semibold"> CELEBRATE EXCHANGE DAY </a>
             </li>
             <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
               <span>
                 <img src="./img/posts/4-Year-Old-Boys-1-629x360.png.webp" alt="post image"
                   style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
               </span>
-              <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold">HOLY WEDNESDAY </a>
+              <a href="" class=" ms-2 ms-lg-3 fw-semibold">HOLY WEDNESDAY </a>
             </li>
             <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
               <span>
                 <img src="./img/posts/8-Year-Old-Girls-min-629x360.png.webp" alt="post image"
                   style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
               </span>
-              <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold"> INTERNATIONAL WHISKEY DAY </a>
+              <a href="" class="ms-2 ms-lg-3 fw-semibold"> INTERNATIONAL WHISKEY DAY </a>
             </li>
             <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
               <span>
                 <img src="./img/posts/9-Year-Old-Boys-min-629x360.png.webp" alt="post image"
                   style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
               </span>
-              <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold"> LITTLE RED WAGON DAY </a>
+              <a href="" class="ms-2 ms-lg-3 fw-semibold"> LITTLE RED WAGON DAY </a>
             </li>
           </ul>
         </section>
-        <div class="position-absolute bottom-0 start-0 w-100 py-3 bg-white border-top border-light">
-          <button
-            class="btn btn-outline-danger d-flex align-items-center align-bottom d-block mx-auto fw-medium border-2 rounded-pill">
+        <div class="position-absolute bottom-0 start-0 w-100 py-3 bg-white text-center">
+          <a href="./post.html" class="btn btn-outline-danger fw-medium border-2 rounded-pill">
             VIEW TODAY'S HOLIDAY
-          </button>
+          </a>
         </div>
       </section>
     </div>
     <div class="row">
-      <!-- post body section start  -->
       <section class="col-md-7 col-lg-8">
+        <!-- post body section start  -->
         <section class="post-body px-md-4">
           <p>
             March 30 is Doctors’ Day, an annual observance aimed at appreciating physicians who help save our lives
@@ -265,7 +296,7 @@
             </p>
           </div>
 
-          <h3 class="text-info fw-bold mb-3">HISTORY OF DOCTORS' DAY</h3>
+          <h3 class="text-info fw-bold mb-3" id="history">HISTORY OF DOCTORS' DAY</h3>
           <p>
             Eudora Brown Almond, the wife of a doctor in Georgia, believed her husband and other physicians deserved
             more
@@ -306,7 +337,51 @@
             birthday of Dr. B. C. Roy, who also sadly died on that date.
           </p>
           <!-- timeline section start  -->
-          <section></section>
+          <section class="darkHighlight bg-light px-3 py-5" id="timeline">
+            <h3 class="text-info fw-bold mb-5 ">DOCTORS' DAY AROUND THE WORLD</h3>
+            <div class="timeline">
+              <section>
+                <div class=" bg-white border border-2 p-4 border-info rounded">
+                  <span class="bg-danger text-white d-inline-block px-2 label rounded">500-300 BC</span>
+                  <span class="fw-medium d-block">The Hippocratic Oath</span>
+                  <p>The first physicians swore to the Greek gods that their work in healing would meet ethical
+                    standards.</p>
+                  <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="timeline image" class="img-fluid rounded">
+                </div>
+              </section>
+              <section>
+                <div class="bg-white border border-2 p-4 border-info rounded">
+                  <span class="bg-danger text-white d-inline-block px-2 label rounded">500-300 BC</span>
+                  <span class="fw-medium d-block">The Hippocratic Oath</span>
+                  <p>The first physicians swore to the Greek gods that their work in healing would meet ethical
+                    standards.</p>
+                  <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="timeline image" class="img-fluid rounded">
+          
+                </div>
+              </section>
+              <section>
+                <div class="bg-white border border-2 p-4 border-info rounded">
+                  <span class="bg-danger text-white d-inline-block px-2 label rounded">500-300 BC</span>
+                  <span class="fw-medium d-block">The Hippocratic Oath</span>
+                  <p>The first physicians swore to the Greek gods that their work in healing would meet ethical
+                    standards.</p>
+                  <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="timeline image" class="img-fluid rounded">
+          
+                </div>
+              </section>
+              <section>
+                <div class="bg-white border border-2 p-4 border-info rounded">
+                  <span class="bg-danger text-white d-inline-block px-2 label rounded">500-300 BC</span>
+                  <span class="fw-medium d-block">The Hippocratic Oath</span>
+                  <p>The first physicians swore to the Greek gods that their work in healing would meet ethical
+                    standards.</p>
+                  <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="timeline image" class="img-fluid rounded">
+          
+                </div>
+              </section>
+            </div>
+          
+          </section>
           <!-- timeline section end  -->
           <!-- table data  -->
           <section class="my-4 darkHighlight bg-light rounded py-5 px-4 mb-4">
@@ -366,7 +441,7 @@
             </div>
           </section>
           <!-- table data end  -->
-          <h3 class="text-info fw-bold mb-3 ">DOCTORS' DAY AROUND THE WORLD</h3>
+          <h3 class="text-info fw-bold mb-3 " id="traditions">TRADITIONS OF THE DAY</h3>
           <p>
             Gratitude towards doctors is extended beyond a verbal ‘thank you’ on Doctors’ Day. Patients or former
             patients and their
@@ -381,7 +456,7 @@
             issues they
             face on online forums.
           </p>
-          <section class="darkHighlight bg-light px-4 py-5 my-4">
+          <section class="darkHighlight bg-light px-4 py-5 my-4" id="stats">
             <h3 class="text-info fw-bold mb-3 ">BY THE NUMBERS</h3>
 
 
@@ -421,7 +496,7 @@
 
           </section>
           <!-- FAQ's accordion start -->
-          <section class="my-5">
+          <section class="my-5" id="faq">
             <h3 class="text-info fw-bold mb-3">DOCTORS' DAY FAQS</h3>
             <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
               <div class="accordion-item">
@@ -482,15 +557,14 @@
 
           </section>
           <!-- FAQ's accordion end -->
-          <section class="my-4 darkHighlight bg-light rounded py-5 px-4 mb-4">
+          <section class="my-4 darkHighlight bg-light rounded py-5 px-4 mb-4" id="celebrate">
             <h3 class="text-info fw-bold mb-3 ">DOCTORS' DAY ACTIVITIES</h3>
             <ol>
               <li class="fs-4">
                 <span class="fw-medium">
                   Give thanks to the doctors in your life
                 </span>
-
-                <p class="fs-6">
+                <p class="fs-6 lead">
                   It's always important to recognize the hard work and dedication that physicians demonstrate in our
                   hospitals and
                   communities each day. Send your doctor an appreciation card or email, donate to your local medical
@@ -505,7 +579,7 @@
                   Schedule that much needed check-up
                 </span>
 
-                <p class="fs-6">
+                <p class="fs-6 lead">
                   Regular visits to your doctor can help find problems before they start and help you have a better
                   chance of treatment
                   and cure. Instead of avoiding your doctor and healthcare provider, take initiative in scheduling
@@ -518,7 +592,98 @@
                   Stay healthy
                 </span>
 
-                <p class="fs-6">
+                <p class="fs-6 lead">
+                  While doctors love to diagnose and help alleviate your problems, they also want you to stay healthy
+                  too. Continue
+                  practicing daily healthy routines—hydrate, exercise, and fuel up on balanced meals. Your doctor (and
+                  your health) will
+                  be sure to thank you!
+                </p>
+                </li>
+                </ol>
+                </section>
+                <!-- fun fact section start  -->
+                <section class="my-5">
+                  <h3 class="bg-info py-3 px-3 px-sm-4 text-white fw-bold mb-3 rounded ">5 FUN FACTS ABOUT DOCTORS</h3>
+                  <ol>
+                    <li class="fs-5">
+                      <span class="fw-medium">
+                        Hallmark has a card for that
+                      </span>
+                      <p class="fs-6 lead">
+                        Due to the holiday’s popularity, Hallmark has official greeting cards for Doctors' Day.
+                      </p>
+                    </li>
+                    <li class="fs-5">
+                      <span class="fw-medium">
+                        Women doctors are on the rise
+                      </span>
+                      <p class="fs-6 lead">
+                        Nearly half (47%) of graduating medical students in 2018 were female.
+                      </p>
+                    </li>
+                    <li class="fs-5">
+                      <span class="fw-medium">
+                        I now pronounce you Dr. and Dr.
+                      </span>
+                      <p class="fs-6 lead">
+                        It is common for doctors to marry other doctors or another healthcare professional.
+                      </p>
+                    </li>
+                    <li class="fs-5">
+                      <span class="fw-medium">
+                        Doctors are hard at work
+                      </span>
+                      <p class="fs-6 lead">
+                        More than sixty percent of all physicians reported working overtime or close to 60 hours a week.
+                      </p>
+                    </li>
+                    <li class="fs-5">
+                      <span class="fw-medium">
+                        “Doctor” is a Latin word
+                      </span>
+                      <p class="fs-6 lead">
+                        The word “doctor” comes from Latin root word “docere,” meaning “to teach.”
+                      </p>
+                    </li>
+                  </ol>
+                </section>
+                <!-- fun fact section end  -->
+                <section class="my-4 darkHighlight bg-light rounded py-5 px-4 mb-4" id="importants">
+                  <h3 class="text-info fw-bold mb-3 ">WHY WE LOVE DOCTORS' DAY</h3>
+                  <ol type="A">
+                    <li class="fs-4">
+                      <span class="fw-medium">
+                        Give thanks to the doctors in your life
+                      </span>
+                
+                      <p class="fs-6 lead">
+                        It's always important to recognize the hard work and dedication that physicians demonstrate in our
+                        hospitals and
+                        communities each day. Send your doctor an appreciation card or email, donate to your local medical
+                        center, or even
+                        nominate your doctor for an award. With nearly 700,000 people working as physicians and surgeons
+                        across the United
+                        States, your doctor would be thrilled to know that their hard work has been valuable to your health.
+                      </p>
+                    </li>
+                    <li class="fs-4">
+                      <span class="fw-medium">
+                        Schedule that much needed check-up
+                      </span>
+                      <p class="fs-6 lead">
+                        Regular visits to your doctor can help find problems before they start and help you have a better
+                        chance of treatment
+                        and cure. Instead of avoiding your doctor and healthcare provider, take initiative in scheduling
+                        regular visits to
+                        ensure you're on the right track to better health.
+                      </p>
+                    </li>
+                    <li class="fs-4">
+                      <span class="fw-medium">
+                        Stay healthy
+                      </span>
+                      <p class="fs-6 lead">
                   While doctors love to diagnose and help alleviate your problems, they also want you to stay healthy
                   too. Continue
                   practicing daily healthy routines—hydrate, exercise, and fuel up on balanced meals. Your doctor (and
@@ -704,7 +869,7 @@
           <ul class="list-group list-group-sm mb-3">
             <li class="list-group-item p-0 border-0 bg-transparent mb-1">
               <a class="fw-light btn-link text-info" href="#">
-                Wikimieda Calendar
+                WikkiMedia Calendar
               </a>
             </li>
           </ul>
@@ -843,7 +1008,7 @@
       <hr />
       <div class="row pt-3 g-3">
         <section class="col-sm-8">
-          <span class="h6 mb-3 d-block">ABOUT WIKIMIEDA</span>
+          <span class="h6 mb-3 d-block">ABOUT WIKKIMEDIA</span>
           <p class="fw-light">
             We keep track of fun holidays and special moments on the cultural
             calendar — giving you exciting activities, deals, local events,
@@ -866,7 +1031,7 @@
     </div>
     <div class="mb-0 py-3 bg-black-50">
       <div class="container">
-        Copyright &copy; 2024 by WikiMieda.
+        Copyright &copy; 2024 by The WikkiMedia.
         <a href="#" class="ms-2 text-info btn-link">Privacy Policy</a>
       </div>
     </div>

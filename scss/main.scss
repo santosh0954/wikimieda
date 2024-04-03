@@ -2,8 +2,9 @@
 $border-radius: 0.2rem;
 $accent: tomato;
 $danger: $accent;
-$primary: #303E54;
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+$primary: #303e54;
+@import "../node_modules/bootstrap/scss/bootstrap.scss",
+  "../node_modules/bootstrap/scss/functions";
 
 @keyframes slideDown {
   from {
@@ -16,6 +17,9 @@ $primary: #303E54;
     opacity: 1;
   }
 }
+::selection {
+  @extend .bg-primary-subtle, .text-primary;
+}
 
 body {
   font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -23,7 +27,19 @@ body {
   font-size: 100%;
   color: #333;
 }
-h1,h2,h3,h4,h5,h6, .h1,.h2,.h3,.h4,.h5,.h6, .navbar-brand {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.navbar-brand {
   font-family: Fredoka;
 }
 a {
@@ -35,7 +51,9 @@ a {
 }
 .btn-danger {
   color: rgba(255, 255, 255, 0.911);
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     color: $white;
   }
 }
@@ -63,29 +81,27 @@ a {
   max-width: 1220px !important;
 }
 
-.btn-outline-danger:hover {
+.btn-outline-danger:hover, .btn-outline-danger:active {
   color: $white;
 }
 
-
 .navbar {
   .searchForm {
-      position: static;
-      @media screen and (min-width: 768px) {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        max-width: 500px;
+    position: static;
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 500px;
     }
   }
   .hideMenu {
-   opacity: 1;
-   transition: opacity 0.2s;
-   @media screen and (min-width: 768px) {
-     opacity: 0 !important;
- }
-
- }
+    opacity: 1;
+    transition: opacity 0.2s;
+    @media screen and (min-width: 768px) {
+      opacity: 0 !important;
+    }
+  }
   .dropdown-item {
     transition: all 0.2s;
     @extend .small, .fw-medium;
@@ -148,12 +164,16 @@ a {
 }
 
 .todayHoliday {
+  z-index: 100;
   a {
     transition: all 0.2s;
     &:hover {
       text-decoration: underline;
       color: $danger;
     }
+  }
+  li:last-child {
+    margin-bottom: 75px !important;
   }
 }
 
@@ -188,7 +208,7 @@ a {
   }
 }
 
-// post page style 
+// post page style
 .submitIdea {
   transition: all 0.2s;
   &:hover {
@@ -203,10 +223,9 @@ a {
     transition: all 0.2s;
     @extend .border, .border-white;
 
-    &:hover {
+    &:hover, &:active, &.active {
       color: $info;
-      @extend .shadow-sm, .rounded-pill,.border, .border-info;
-
+      @extend .shadow-sm, .rounded-pill, .border, .border-info;
     }
   }
 
@@ -227,20 +246,136 @@ a {
 .post-body {
   line-height: 2;
   .darkHighlight {
-    margin: 0 -1rem;
+    margin: 0 -0.75rem;
   }
   .accordion {
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       font-family: Poppins;
-      
     }
     button {
       @extend .fs-6;
-
     }
     .accordion-button:not(.collapsed) {
       background-color: transparent !important;
-      color: $danger
+      color: $danger;
     }
+  }
+}
+.timeline {
+  @extend .d-flex, .position-relative, .flex-column;
+  & > section {
+    position: relative;
+    @extend .mb-4, .mt-4, .w-100, .ps-3;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10%;
+      width: 20px;
+      height: 20px;
+      @extend .bg-info, .rounded-circle;
+    }
+    & > div {
+      position: relative;
+    }
+
+    @include media-breakpoint-up(sm) {
+      width: 50% !important;
+    }
+  }
+  .label {
+    position: absolute;
+    top: 0;
+    margin-top: -1rem;
+  }
+  & > section:nth-child(even) {
+    @extend .ms-3;
+    align-self: flex-end;
+    .label {
+      left: 0;
+      @extend .ms-3;
+    }
+    &::after {
+      left: 0;
+      margin-left: -10px;
+    }
+  }
+  & > section:nth-child(odd) {
+
+    @include media-breakpoint-up(sm) {
+      padding-right: .75rem;
+      margin-right: 0.75rem !important;
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+      text-align: right;
+    }
+    .label {
+      left: 0;
+      @extend .ms-3;
+      @include media-breakpoint-up(sm) {
+        right: 0;
+        left: auto;
+        margin-right: 0.75rem;
+        margin-left: 0;
+      }
+    }
+    &::after {
+      left: 0;
+      margin-left: -11px;
+      @include media-breakpoint-up(sm) {
+        left: auto !important;
+        right: 0 !important;
+        margin-right: -11px;
+      }
+    }
+  }
+  &::after {
+    content: "";
+
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @extend .border, .border-info;
+    @include media-breakpoint-up(sm) {
+      left: 50% !important;
+    }
+  }
+}
+
+.calendar_wrapper {
+  @extend .bg-primary, .text-white;
+  .btn {
+    line-height: normal;
+  }
+  .calendar {
+    text-align: center;
+    .days li:not(.inactive) {
+      cursor: pointer;
+      &:hover {
+        @extend .text-danger;
+      }
+    }
+  }
+  ul {
+    @extend .d-flex, .list-unstyled, .flex-wrap;
+    li {
+      flex: calc(100% / 7);
+      transition: all 0.2s;
+      a {
+        transition: all 0.2s;
+        @extend .py-2, .d-block;
+
+
+      }
+    }
+  }
+  .active {
+    border: 1px dotted $danger;
+    @extend .text-danger, .fw-medium;
+  }
+  .inactive {
+    @extend .text-white-50, .fw-light;
   }
 }
