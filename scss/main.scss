@@ -81,7 +81,8 @@ a {
   max-width: 1220px !important;
 }
 
-.btn-outline-danger:hover, .btn-outline-danger:active {
+.btn-outline-danger:hover,
+.btn-outline-danger:active {
   color: $white;
 }
 
@@ -144,6 +145,12 @@ a {
 .carousel {
   .carousel-item {
     max-height: 400px;
+  }
+  img {
+    aspect-ratio: 7 / 9;
+    @include media-breakpoint-up(sm) {
+      aspect-ratio: 9 / 7;
+    }
   }
 
   .carousel-control-next,
@@ -223,7 +230,9 @@ a {
     transition: all 0.2s;
     @extend .border, .border-white;
 
-    &:hover, &:active, &.active {
+    &:hover,
+    &:active,
+    &.active {
       color: $info;
       @extend .shadow-sm, .rounded-pill, .border, .border-info;
     }
@@ -302,9 +311,8 @@ a {
     }
   }
   & > section:nth-child(odd) {
-
     @include media-breakpoint-up(sm) {
-      padding-right: .75rem;
+      padding-right: 0.75rem;
       margin-right: 0.75rem !important;
       margin-left: 0 !important;
       padding-left: 0 !important;
@@ -366,8 +374,6 @@ a {
       a {
         transition: all 0.2s;
         @extend .py-2, .d-block;
-
-
       }
     }
   }
@@ -378,4 +384,8 @@ a {
   .inactive {
     @extend .text-white-50, .fw-light;
   }
+}
+.owl-carousel img {
+  aspect-ratio: 9/7;
+  object-fit: cover;
 }

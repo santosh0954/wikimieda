@@ -42,6 +42,7 @@ const months = [
 function renderCalendar() {
  const currentDate = document.querySelector(".calendar_wrapper header p");
  const days = document.querySelector(".calendar_wrapper .days");
+ if (!currentDate) return;
  
  let firstDayofMonth = new Date(currYear, currMonth, 1).getDay();
  let lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate();
@@ -83,3 +84,4 @@ nextPrevButton.forEach((item) => {
     renderCalendar()
   });
 });
+
