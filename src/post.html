@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WikiMieda | A blog site</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="./img/favicons/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+                                      rel="stylesheet" /> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body class="bg-white">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary shadow-sm mb-3 fw-semibold">
+      <div class="container-fluid container justify-content-between">
+        <a class="navbar-brand fw-bold fs-4" href="./"><span class="text-danger">Wikki</span>media</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
+          <ul class="navbar-nav small mx-auto mb-2 mb-lg-0 text-uppercase menu">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Today</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Birthday
+                <i class="fa fa-chevron-down fw-light"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">January</a></li>
+                <li><a class="dropdown-item" href="#">February</a></li>
+                <li><a class="dropdown-item" href="#">March</a></li>
+                <li><a class="dropdown-item" href="#">April</a></li>
+                <li><a class="dropdown-item" href="#">May</a></li>
+                <li><a class="dropdown-item" href="#">Jun</a></li>
+                <li><a class="dropdown-item" href="#">July</a></li>
+                <li><a class="dropdown-item" href="#">August</a></li>
+                <li><a class="dropdown-item" href="#">September</a></li>
+                <li><a class="dropdown-item" href="#">October</a></li>
+                <li><a class="dropdown-item" href="#">November</a></li>
+                <li><a class="dropdown-item" href="#">December</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Holiday
+                <i class="fa fa-chevron-down fw-light"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Animals</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Arts & Entertainment</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Cause</a></li>
+                <li><a class="dropdown-item" href="#">Cultural</a></li>
+                <li><a class="dropdown-item" href="#">Fedral</a></li>
+                <li><a class="dropdown-item" href="#">Food & Beverage</a></li>
+                <li><a class="dropdown-item" href="#">Health</a></li>
+                <li><a class="dropdown-item" href="#">Relationships</a></li>
+                <li><a class="dropdown-item" href="#">September</a></li>
+                <li><a class="dropdown-item" href="#">Religious</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Special interest</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Month
+                <i class="fa fa-chevron-down fw-light"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">January</a></li>
+                <li><a class="dropdown-item" href="#">February</a></li>
+                <li><a class="dropdown-item" href="#">March</a></li>
+                <li><a class="dropdown-item" href="#">April</a></li>
+                <li><a class="dropdown-item" href="#">May</a></li>
+                <li><a class="dropdown-item" href="#">Jun</a></li>
+                <li><a class="dropdown-item" href="#">July</a></li>
+                <li><a class="dropdown-item" href="#">August</a></li>
+                <li><a class="dropdown-item" href="#">September</a></li>
+                <li><a class="dropdown-item" href="#">October</a></li>
+                <li><a class="dropdown-item" href="#">November</a></li>
+                <li><a class="dropdown-item" href="#">December</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Create a Holiday</a>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-end flex-column flex-md-row align-items-end align-items-lg-center">
+            <a href="./login.html"
+              class="btn order-0 btn-outline-danger border-1 px-3 rounded-pill me-2 mb-2 mb-md-0">Login</a>
+            <form class="searchForm input-group end-0 me-md-5 d-none overflow-hidden order-2 order-md-1" role="search"
+              id="search-input">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn bg-white order-1 order-md-2" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <button class="btn text-white" id="toggle-search">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container pb-5" data-bs-spy="scroll" data-bs-target="#pageMenu">
+    <!-- get idea section  -->
+    <section
+      class="alert alert-primary col-md-7 col-lg-8 d-flex align-items-center text-primary fw-medium shadow-sm flex-wrap">
+      <img src="./img/posts/lightbulb.svg" alt="light bulb image" width="50px" class="me-2 me-lg-3 mb-3 mb-md-0">
+      <span>Got an idea for a holiday? Send it to us</span>
+      <a href="#" class="btn bg-white border-primary-subtle text-danger ms-auto rounded-pill px-3 submitIdea">Submit Now
+      </a>
+    </section>
+    <div class="row align-items-start mb-4 mb-md-0 overflow-x-hidden">
+      <section class="col-md-7 col-lg-8" data-aos="fade-right">
+        <!-- post banner section start  -->
+        <div class="d-flex flex-column shadow-sm rounded overflow-hidden mb-4">
+          <div class="bg-dark position-relative">
+            <img src="./img/posts/Doctors-1-1200x834.jpg" alt="post image" class="img-fluid opacity-50">
+            <p class="position-absolute bottom-0 w-100 text-center text-white fw-bold h1 py-3 display-5">Doctors' Day –
+              March
+              30,
+              2024</p>
+            <span
+              class="px-3 py-1 bg-white text-danger position-absolute start-0 top-0 fw-medium fs-6 m-3 shadow-sm rounded">
+              FEATURED
+            </span>
+            <span
+              class="text-start px-3 py-1 bg-danger text-white position-absolute end-0 top-0 fw-medium fs-5 m-3 shadow-sm rounded"
+              style="line-height: 1.2">
+              <small class="d-block fw-light small">SUN</small>
+              March 30
+            </span>
+          </div>
+          <div class="px-2">
+            <ul class="nav fw-medium na page-menu small flex-nowrap py-2" id="pageMenu">
+              <li class="nav-item">
+                <a href="#history" class="nav-link">History</a>
+              </li>
+              <li class="nav-item">
+                <a href="#timeline" class="nav-link">Timeline</a>
+              </li>
+              <li class="nav-item">
+                <a href="#faq" class="nav-link">FAQ'S</a>
+              </li>
+              <li class="nav-item">
+                <a href="#importants" class="nav-link">Importants</a>
+              </li>
+              <li class="nav-item">
+                <a href="#celebrate" class="nav-link">Celebrate</a>
+              </li>
+              <li class="nav-item">
+                <a href="#traditions" class="nav-link">Traditions</a>
+              </li>
+              <li class="nav-item">
+                <a href="#related" class="nav-link">Related</a>
+              </li>
+              <li class="nav-item">
+                <a href="#stats" class="nav-link">Stats</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- post banner section end  -->
+      </section>
+      <section data-aos="fade-left"
+        class="col-md-5 col-lg-4 bg-white rounded shadow-sm  rounded position-relative overflow-hidden"
+        style="min-height: 70px;">
+        <!-- calendar section start  -->
+        <section class=" p-2 mb-5 mb-md-0">
+          <div class="calendar_wrapper p-3 rounded">
+            <header class="d-flex justify-content-between align-items-center pb-3">
+              <p class="fw-medium fs-4 mb-0"></p>
+              <div class="icons btn-group btn-group-sm">
+                <button id="prev" class="btn btn-light rounded-start-pill">
+                  <i class="fa fa-chevron-left"></i>
+                </button>
+                <button id="next" class="btn btn-light ms-1 rounded-end-pill">
+                  <i class="fa fa-chevron-right"></i>
+                </button>
+              </div>
+            </header>
+            <div class="calendar">
+              <ul class="weeks fw-medium text-uppercase">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+              </ul>
+              <ul class="days">
+
+              </ul>
+            </div>
+          </div>
+          </section>
+          <!-- calendar section end  -->
+          <section class="bg-light mx-2 p-1 overflow-y-auto d-none d-md-block todayHoliday" style="height: 266px;">
+          <ul class="list-group list-group-flush small">
+            <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
+              <span>
+                <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="post image"
+                  style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
+              </span>
+              <a href="" class=" ms-2 ms-lg-3 fw-semibold"> AUTISM ACCEPTANCE WEEK </a>
+            </li>
+            <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
+              <span>
+                <img src="./img/posts/17-Year-Olds-min-629x360.png.webp" alt="post image"
+                  style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
+              </span>
+              <a href="" class=" ms-2 ms-lg-3 fw-semibold"> AMERICAN RED CROSS GIVING DAY </a>
+            </li>
+            <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
+              <span>
+                <img src="./img/posts/20-Year-Olds-min-629x360.png.webp" alt="post image"
+                  style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
+              </span>
+              <a href="" class=" ms-2 ms-lg-3 fw-semibold"> CELEBRATE EXCHANGE DAY </a>
+            </li>
+            <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
+              <span>
+                <img src="./img/posts/4-Year-Old-Boys-1-629x360.png.webp" alt="post image"
+                  style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
+              </span>
+              <a href="" class=" ms-2 ms-lg-3 fw-semibold">HOLY WEDNESDAY </a>
+            </li>
+            <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
+              <span>
+                <img src="./img/posts/8-Year-Old-Girls-min-629x360.png.webp" alt="post image"
+                  style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
+              </span>
+              <a href="" class="ms-2 ms-lg-3 fw-semibold"> INTERNATIONAL WHISKEY DAY </a>
+            </li>
+            <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
+              <span>
+                <img src="./img/posts/9-Year-Old-Boys-min-629x360.png.webp" alt="post image"
+                  style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
+              </span>
+              <a href="" class="ms-2 ms-lg-3 fw-semibold"> LITTLE RED WAGON DAY </a>
+            </li>
+          </ul>
+        </section>
+        <div class="position-absolute bottom-0 start-0 w-100 py-3 bg-white text-center">
+          <a href="./post.html" class="btn btn-outline-danger fw-medium border-2 rounded-pill">
+            VIEW TODAY'S HOLIDAY
+          </a>
+        </div>
+      </section>
+    </div>
+    <div class="row  overflow-hidden">
+      <section class="col-md-7 col-lg-8">
+        <!-- post body section start  -->
+        <section class="post-body px-md-4">
+          <p data-aos="fade-up">
+            March 30 is Doctors’ Day, an annual observance aimed at appreciating physicians who help save our lives
+            everywhere. The
+            holiday first started in 1933 in Winder, Georgia, and since then it’s been honored every year on March 30
+            which
+            was the
+            first anniversary of a doctor using ether anesthesia by Dr. Crawford W. Long. Today we continue to celebrate
+            medical
+            advances like these and thank all doctors everywhere who’ve spent so much time and energy mastering their
+            field of
+            expertise.
+          </p>
+          <div class="bg-light py-5 px-4 mb-4 darkHighlight rounded" data-aos="fade-up">
+            <h3 class="text-info fw-bold mb-4">WHEN IS DOCTORS' DAY 2024?</h3>
+            <p>
+              Doctors’ Day is celebrated annually on March 30. It is a day to celebrate doctors, surgeons, physicians,
+              and of course,
+              “Grey’s Anatomy.”
+            </p>
+          </div>
+
+          <h3 class="text-info fw-bold mb-3" id="history">HISTORY OF DOCTORS' DAY</h3>
+          <p>
+            Eudora Brown Almond, the wife of a doctor in Georgia, believed her husband and other physicians deserved
+            more
+            recognition for their hard work and set out to make this idea a reality. The first observed Doctors’ Day
+            occurred on
+            March 30, 1933, exactly 91 years after Dr. Long’s remarkable discovery.
+          </p>
+          <p>
+            Almond mailed greeting cards to all local physicians and their wives, and she put flowers on the graves of
+            deceased
+            doctors, including Dr. Long. The flowers were red carnations, which would later become the representative
+            flower for the
+            national holiday. A few other local doctors’ wives even assisted Almond in preparing a celebratory luncheon
+            so their
+            husbands’ work in healthcare could be publicly appreciated.
+          </p>
+          <p>
+            The tradition of delivering greeting cards to physicians, both alive and dead, has continued throughout the
+            years and is
+            still a common way of celebrating this holiday today. The red carnation is also still popularly used to say
+            “thank you”
+            to doctors for their work in medicine.
+          </p>
+          <p>
+            Doctors’ Day was unofficially celebrated for many years before it became a legal holiday. On March 30, 1958,
+            the U.S.
+            House of Representatives adopted a resolution that commemorates Doctors’ Day and on October 30, 1990, George
+            W. Bush
+            signed the legislature after approval from both the House and the Senate.
+          </p>
+          <p>
+            However, other countries celebrate their doctors on a different day than we do, often to recognize an
+            important
+            physician from their country. Spain, Cuba, and Argentina celebrate on December 3 to commemorate Dr. Carlos
+            Juan Finlay’s
+            birthday, who famously identified mosquitos as the cause of yellow fever. India celebrates on July 1 to
+            commemorate the
+            birthday of Dr. B. C. Roy, who also sadly died on that date.
+          </p>
+          <!-- timeline section start  -->
+          <section data-aos="fade-up" class="darkHighlight bg-light px-3 py-5" id="timeline">
+            <h3 class="text-info fw-bold mb-5 ">DOCTORS' DAY AROUND THE WORLD</h3>
+            <div class="timeline">
+              <section>
+                <div class=" bg-white border border-2 p-4 border-info rounded">
+                  <span class="bg-danger text-white d-inline-block px-2 label rounded">500-300 BC</span>
+                  <span class="fw-medium d-block">The Hippocratic Oath</span>
+                  <p>The first physicians swore to the Greek gods that their work in healing would meet ethical
+                    standards.</p>
+                  <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="timeline image" class="img-fluid rounded">
+                </div>
+              </section>
+              <section>
+                <div class="bg-white border border-2 p-4 border-info rounded">
+                  <span class="bg-danger text-white d-inline-block px-2 label rounded">500-300 BC</span>
+                  <span class="fw-medium d-block">The Hippocratic Oath</span>
+                  <p>The first physicians swore to the Greek gods that their work in healing would meet ethical
+                    standards.</p>
+                  <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="timeline image" class="img-fluid rounded">
+
+                </div>
+              </section>
+              <section>
+                <div class="bg-white border border-2 p-4 border-info rounded">
+                  <span class="bg-danger text-white d-inline-block px-2 label rounded">500-300 BC</span>
+                  <span class="fw-medium d-block">The Hippocratic Oath</span>
+                  <p>The first physicians swore to the Greek gods that their work in healing would meet ethical
+                    standards.</p>
+                  <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="timeline image" class="img-fluid rounded">
+
+                </div>
+              </section>
+              <section>
+                <div class="bg-white border border-2 p-4 border-info rounded">
+                  <span class="bg-danger text-white d-inline-block px-2 label rounded">500-300 BC</span>
+                  <span class="fw-medium d-block">The Hippocratic Oath</span>
+                  <p>The first physicians swore to the Greek gods that their work in healing would meet ethical
+                    standards.</p>
+                  <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="timeline image" class="img-fluid rounded">
+
+                </div>
+              </section>
+            </div>
+
+          </section>
+          <!-- timeline section end  -->
+          <!-- table data  -->
+          <section data-aos="fade-up" class="my-4 darkHighlight bg-light rounded py-5 px-4 mb-4">
+            <h3 class="text-info fw-bold mb-4">DOCTORS' DAY AROUND THE WORLD</h3>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <caption class="sr-only"> Doctors' Day Around the World
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Country</th>
+                    <th scope="col">Holiday</th>
+                    <th scope="col">Occasion</th>
+                    <th scope="col">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Russia</td>
+                    <td lang="nl">International Day of the Doctor</td>
+                    <td>One of the oldest and revered professions in the world is celebrated in Russia.</td>
+                    <td>First Monday of October</td>
+                  </tr>
+                  <tr>
+                    <td>Canada</td>
+                    <td lang="nl">FND Awareness Day</td>
+                    <td>A day for raising awareness of Functional Neurological Disorder.</td>
+                    <td>April 13</td>
+                  </tr>
+                  <tr>
+                    <td>South Africa</td>
+                    <td lang="nl">Pregnancy Awareness Week</td>
+                    <td>This observance aims to strengthen pregnancy education and stress important issues that promote
+                      a
+                      healthy
+                      pregnancy and safe motherhood.</td>
+                    <td>February 10–16</td>
+                  </tr>
+                  <tr>
+                    <td>Vietnam</td>
+                    <td lang="nl">Doctors’ Day</td>
+                    <td>Celebrating doctors and their valuable services.</td>
+                    <td>February 27</td>
+                  </tr>
+                  <tr>
+                    <td>India</td>
+                    <td lang="nl">National Deworming Day</td>
+                    <td>The day aims at eradicating intestinal worms also known as Soil-Transmitted Helminths (STH),
+                      among
+                      children in
+                      the age group of 1-19 years.</td>
+                    <td>February 10</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </section>
+          <!-- table data end  -->
+          <h3 class="text-info fw-bold mb-3 " id="traditions">TRADITIONS OF THE DAY</h3>
+          <p>
+            Gratitude towards doctors is extended beyond a verbal ‘thank you’ on Doctors’ Day. Patients or former
+            patients and their
+            families send thoughtful notes, flowers, and personalized gifts to their doctors who have saved their lives
+            or made life
+            easier for them through their treatment.
+          </p>
+          <p>
+            Doctors’ Day won’t be complete without bingeing on doctor-centered shows like “Grey’s Anatomy,” “E.R,”
+            “Scrubs,”
+            “General Hospital,” and more. There is also a lot of talk and discussion on the lifestyle of doctors and the
+            issues they
+            face on online forums.
+          </p>
+          <section data-aos="fade-up" class="darkHighlight bg-light px-4 py-5 my-4" id="stats">
+            <h3 class="text-info fw-bold mb-3 ">BY THE NUMBERS</h3>
+
+
+            <p><span style="font-weight: 400;"><strong>82%</strong> – the percentage of doctors in a committed
+                relationship.&nbsp;</span></p>
+            <p><span style="font-weight: 400;"><strong>21%</strong> – the percentage of doctors whose spouse is also a
+                doctor.</span></p>
+            <p><span style="font-weight: 400;"><strong>76%</strong> – the percentage of doctors whose religion/belief
+                helps them
+                cope with stress.</span></p>
+            <p><span style="font-weight: 400;"><strong>1–3</strong> – the number of close friends most doctors
+                have.</span></p>
+            <p><span style="font-weight: 400;"><strong>4%</strong> – the percentage of doctors who have no close
+                friends.</span>
+            </p>
+            <p><span style="font-weight: 400;"><strong>700,000</strong> – the estimated number of doctors in the U.S
+                alone.</span>
+            </p>
+            <p><span style="font-weight: 400;"><strong>2003</strong> – the year when Hallmark started printing cards for
+                Doctors’
+                Day.</span></p>
+            <p><span style="font-weight: 400;"><strong>60 hours</strong> – the estimated number of hours worked per week
+                by a
+                doctor.</span></p>
+            <p><span style="font-weight: 400;"><strong>$794.4 billion</strong> – the physician and clinical services
+                expenditure
+                in the U.S. in 2020.</span></p>
+            <p><span style="font-weight: 400;"><strong>6,000</strong> – the number of times sponges or other instruments
+                is left
+                inside patients by doctors every year.</span></p>
+            <p><span
+                data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;2/3rd of Doctors do not participate in 401(k) plan despite high participation rates by hospitals.&quot;}"
+                data-sheets-userformat="{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}"><strong>2/3rd
+                </strong>– the number&nbsp;of Doctors who do not participate in a 401(k) plan despite high <a href="#"
+                  rel="noopener">participation rates</a> by hospitals.</span></p>
+
+
+          </section>
+          <!-- FAQ's accordion start -->
+          <section data-aos="fade-up" class="my-5" id="faq">
+            <h3 class="text-info fw-bold mb-3">DOCTORS' DAY FAQS</h3>
+            <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    How do people celebrate Doctors’ Day?
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse ">
+                  <div class="accordion-body">
+                    There is no right way to celebrate Doctors’
+                    Day and luckily, you have many traditions to choose from. You can host a
+                    celebratory luncheon or recognition ceremony if you like to go big or simply give your local
+                    physicians a treat or
+                    “thank you” note.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                    What do you write in a Doctors’ Day card?
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Write something heartfelt that lets your local doctor know how much you appreciate their hard work.
+                    A
+                    simple “thank you”
+                    will be sure to put a smile on any hardworking doctor’s face.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseThree">
+                    How do you thank a doctor?
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Buy your doctor an appreciation gift, such as flowers, a greeting card, or tasty treats to thank
+                    them.
+                    However, you can
+                    also thank the physicians in your life without spending money by thanking them personally and
+                    encouraging those around
+                    you to do so as well.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+          <!-- FAQ's accordion end -->
+          <section data-aos="fade-up" class="my-4 darkHighlight bg-light rounded py-5 px-4 mb-4" id="celebrate">
+            <h3 class="text-info fw-bold mb-3 ">DOCTORS' DAY ACTIVITIES</h3>
+            <ol>
+              <li class="fs-4">
+                <span class="fw-medium">
+                  Give thanks to the doctors in your life
+                </span>
+                <p class="fs-6 lead">
+                  It's always important to recognize the hard work and dedication that physicians demonstrate in our
+                  hospitals and
+                  communities each day. Send your doctor an appreciation card or email, donate to your local medical
+                  center, or even
+                  nominate your doctor for an award. With nearly 700,000 people working as physicians and surgeons
+                  across the United
+                  States, your doctor would be thrilled to know that their hard work has been valuable to your health.
+                </p>
+              </li>
+              <li class="fs-4">
+                <span class="fw-medium">
+                  Schedule that much needed check-up
+                </span>
+
+                <p class="fs-6 lead">
+                  Regular visits to your doctor can help find problems before they start and help you have a better
+                  chance of treatment
+                  and cure. Instead of avoiding your doctor and healthcare provider, take initiative in scheduling
+                  regular visits to
+                  ensure you're on the right track to better health.
+                </p>
+              </li>
+              <li class="fs-4">
+                <span class="fw-medium">
+                  Stay healthy
+                </span>
+
+                <p class="fs-6 lead">
+                  While doctors love to diagnose and help alleviate your problems, they also want you to stay healthy
+                  too. Continue
+                  practicing daily healthy routines—hydrate, exercise, and fuel up on balanced meals. Your doctor (and
+                  your health) will
+                  be sure to thank you!
+                </p>
+              </li>
+              </ol>
+              </section>
+              <!-- fun fact section start  -->
+          <section data-aos="fade-up" class="my-5">
+            <h3 class="bg-info py-3 px-3 px-sm-4 text-white fw-bold mb-3 rounded ">5 FUN FACTS ABOUT DOCTORS</h3>
+            <ol>
+              <li class="fs-5">
+                <span class="fw-medium">
+                  Hallmark has a card for that
+                </span>
+                <p class="fs-6 lead">
+                  Due to the holiday’s popularity, Hallmark has official greeting cards for Doctors' Day.
+                </p>
+              </li>
+              <li class="fs-5">
+                <span class="fw-medium">
+                  Women doctors are on the rise
+                </span>
+                <p class="fs-6 lead">
+                  Nearly half (47%) of graduating medical students in 2018 were female.
+                </p>
+              </li>
+              <li class="fs-5">
+                <span class="fw-medium">
+                  I now pronounce you Dr. and Dr.
+                </span>
+                <p class="fs-6 lead">
+                  It is common for doctors to marry other doctors or another healthcare professional.
+                </p>
+              </li>
+              <li class="fs-5">
+                <span class="fw-medium">
+                  Doctors are hard at work
+                </span>
+                <p class="fs-6 lead">
+                  More than sixty percent of all physicians reported working overtime or close to 60 hours a week.
+                </p>
+              </li>
+              <li class="fs-5">
+                <span class="fw-medium">
+                  “Doctor” is a Latin word
+                </span>
+                <p class="fs-6 lead">
+                  The word “doctor” comes from Latin root word “docere,” meaning “to teach.”
+                </p>
+              </li>
+            </ol>
+          </section>
+          <!-- fun fact section end  -->
+          <section data-aos="fade-up" class="my-4 darkHighlight bg-light rounded py-5 px-4 mb-4" id="importants">
+            <h3 class="text-info fw-bold mb-3 ">WHY WE LOVE DOCTORS' DAY</h3>
+            <ol type="A">
+              <li class="fs-4">
+                <span class="fw-medium">
+                  Give thanks to the doctors in your life
+                </span>
+          
+                <p class="fs-6 lead">
+                  It's always important to recognize the hard work and dedication that physicians demonstrate in our
+                  hospitals and
+                  communities each day. Send your doctor an appreciation card or email, donate to your local medical
+                  center, or even
+                  nominate your doctor for an award. With nearly 700,000 people working as physicians and surgeons
+                  across the United
+                  States, your doctor would be thrilled to know that their hard work has been valuable to your health.
+                </p>
+              </li>
+              <li class="fs-4">
+                <span class="fw-medium">
+                  Schedule that much needed check-up
+                </span>
+                <p class="fs-6 lead">
+                  Regular visits to your doctor can help find problems before they start and help you have a better
+                  chance of treatment
+                  and cure. Instead of avoiding your doctor and healthcare provider, take initiative in scheduling
+                  regular visits to
+                  ensure you're on the right track to better health.
+                </p>
+              </li>
+              <li class="fs-4">
+                <span class="fw-medium">
+                  Stay healthy
+                </span>
+                <p class="fs-6 lead">
+                  While doctors love to diagnose and help alleviate your problems, they also want you to stay healthy
+                  too. Continue
+                  practicing daily healthy routines—hydrate, exercise, and fuel up on balanced meals. Your doctor (and
+                  your health) will
+                  be sure to thank you!
+                </p>
+              </li>
+            </ol>
+          </section>
+        </section>
+        <!-- related post section start  -->
+        <section data-aos="fade-up" class="mt-5" id="related">
+          <h3 class="text-info fw-bold mb-3 ">RELATED HOLIDAYS</h3>
+          <div class="owl-carousel owl-theme">
+            <div class="p-2">
+              <section class="card border-light rounded shadow-sm">
+                <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="post image" class="card-img-top">
+                <div class="card-body">
+                  <a href="#" class="fw-medium stretched-link">
+                    Global Day of Parents
+                  </a>
+                </div>
+              </section>
+            </div>
+            <div class="p-2">
+              <section class="card border-light rounded shadow-sm">
+                <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="post image" class="card-img-top">
+                <div class="card-body">
+                  <a href="#" class="fw-medium stretched-link">
+                    Global Day of Parents
+                  </a>
+                </div>
+              </section>
+            </div>
+            <div class="p-2">
+              <section class="card border-light rounded shadow-sm">
+                <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="post image" class="card-img-top">
+                <div class="card-body">
+                  <a href="#" class="fw-medium stretched-link">
+                    Global Day of Parents
+                  </a>
+                </div>
+              </section>
+            </div>
+            <div class="p-2">
+              <section class="card border-light rounded shadow-sm">
+                <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="post image" class="card-img-top">
+                <div class="card-body">
+                  <a href="#" class="fw-medium stretched-link">
+                    Global Day of Parents
+                  </a>
+                </div>
+              </section>
+            </div>
+            <div class="p-2">
+              <section class="card border-light rounded shadow-sm">
+                <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="post image" class="card-img-top">
+                <div class="card-body">
+                  <a href="#" class="fw-medium stretched-link">
+                    Global Day of Parents
+                  </a>
+                </div>
+              </section>
+            </div>
+        
+          </div>
+        </section>
+        <!-- related post section end -->
+        <!-- post body section end -->
+      </section>
+      for right side content
+      <section class="col-md-5 col-lg-4">
+
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="bg-primary text-white pt-5">
+    <div class="container">
+      <div class="row g-3">
+        <section class="col-sm-6 col-md-3">
+          <ul class="list-group list-group-sm mb-3">
+            <li class="list-group-item p-0 mb-3 border-0 bg-transparent text-white d-flex">
+              <span class="rounded-circle bg-white text-primary d-flex justify-content-center align-items-center"
+                style="width: 50px; height: 50px">
+                <i class="fa fa-sun-o fa-2x"></i>
+              </span>
+              <span class="ps-3">
+                6200 <br />
+                Days Celebrated
+              </span>
+            </li>
+            <li class="list-group-item p-0 mb-3 border-0 bg-transparent text-white d-flex">
+              <span class="rounded-circle bg-white text-primary d-flex justify-content-center align-items-center"
+                style="width: 50px; height: 50px">
+                <i class="fa fa-gift fa-2x"></i>
+              </span>
+              <span class="ps-3">
+                19200 <br />
+                Ways to Celebrate
+              </span>
+            </li>
+            <li class="list-group-item p-0 mb-3 border-0 bg-transparent text-white d-flex">
+              <span class="rounded-circle bg-white text-primary d-flex justify-content-center align-items-center"
+                style="width: 50px; height: 50px">
+                <i class="fa fa-users fa-2x"></i>
+              </span>
+              <span class="ps-3">
+                10,00,00+ <br />
+                Happy Users
+              </span>
+            </li>
+          </ul>
+        </section>
+        <section class="col-sm-6 col-md-3">
+          <span class="d-block mb-2 fs-5"> ABOUT US </span>
+          <ul class="list-group list-group-sm mb-3">
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">Our Mission</a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">Our Story</a>
+            </li>
+          </ul>
+          <span class="d-block mb-2 fs-5"> RESOURCES </span>
+          <ul class="list-group list-group-sm mb-3">
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                For Businesses
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                For Journalist
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> For Brands </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                For Influencers
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> For FAQ's </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> News </a>
+            </li>
+          </ul>
+          <span class="d-block mb-2 fs-5"> CONTACT US </span>
+          <ul class="list-group list-group-sm mb-3">
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                Submit a Event
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                Promote an Event
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                Work With Us
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                Submit an Error
+              </a>
+            </li>
+          </ul>
+          <span class="d-block mb-2 fs-5"> OUR SERVICES </span>
+          <ul class="list-group list-group-sm mb-3">
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                Create a Holiday
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                Sponsor a Holiday
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                Data Licensing
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="col-sm-6 col-md-3">
+          <span class="d-block mb-2 fs-5"> MONTHS </span>
+          <ul class="list-group list-group-sm mb-3">
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> January </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> February </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> March </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> April </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> May </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> June </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> July </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> August </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> September </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> October </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> November </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> December </a>
+            </li>
+          </ul>
+          <span class="d-block mb-2 fs-5"> UPCOMMING </span>
+          <ul class="list-group list-group-sm mb-3">
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> Today </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">Tomorrow</a>
+            </li>
+          </ul>
+          <span class="d-block mb-2 fs-5"> ALL MONTHS </span>
+          <ul class="list-group list-group-sm mb-3">
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                WikkiMedia Calendar
+              </a>
+            </li>
+          </ul>
+          <span class="d-block mb-2 fs-5"> GIFTS </span>
+          <ul class="list-group list-group-sm mb-3">
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                Reviews and Gift guid
+              </a>
+            </li>
+          </ul>
+          <span class="d-block mb-2 fs-5"> BLOG </span>
+          <ul class="list-group list-group-sm mb-3">
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> Blog Home </a>
+            </li>
+          </ul>
+        </section>
+        <section class="col-sm-6 col-md-3">
+          <span class="d-block mb-2 fs-5"> SHOPPING REVIEWS </span>
+          <ul class="list-group list-group-sm mb-3">
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> Baby </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> Car </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> Children </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                Health & Fitness
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                Home & Garden
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> Kitchen </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> Pets </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> Sleep </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> Tech </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> Travel </a>
+            </li>
+          </ul>
+          <span class="d-block mb-2 fs-5"> GIFT GUIDES </span>
+          <ul class="list-group list-group-sm mb-3">
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> By Age </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                By Interest
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                By Occasion
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#"> By Price </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                By Recipient
+              </a>
+            </li>
+          </ul>
+          <span class="d-block mb-2 fs-5"> POPPULAR HOLIDAYS </span>
+          <ul class="list-group list-group-sm mb-3">
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                National Girlfriend Day
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                Day of the Dead
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                National Boyfriend Day
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                National Sons Day
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                National Independence Day
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                National Pride Day
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                National Best Friend Day
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                National Daughter Day
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                World Bicyle Day
+              </a>
+            </li>
+            <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+              <a class="fw-light btn-link text-info" href="#">
+                National Dog Day
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <hr />
+      <div class="row pt-3 g-3">
+        <section class="col-sm-8">
+          <span class="h6 mb-3 d-block">ABOUT WIKKIMEDIA</span>
+          <p class="fw-light">
+            We keep track of fun holidays and special moments on the cultural
+            calendar — giving you exciting activities, deals, local events,
+            brand promotions, and other exciting ways to celebrate.
+          </p>
+        </section>
+        <section class="col-sm-4 text-center mb-3">
+          <span class="h6 mb-3 d-block">Follow us on</span>
+          <a href="#" class="m-2">
+            <i class="fa fa-facebook-f fa-2x"></i>
+          </a>
+          <a href="#" class="m-2">
+            <i class="fa fa-instagram fa-2x"></i>
+          </a>
+          <a href="#" class="m-2">
+            <i class="fa fa-twitter fa-2x"></i>
+          </a>
+        </section>
+      </div>
+    </div>
+    <div class="mb-0 py-3 bg-black-50">
+      <div class="container">
+        Copyright &copy; 2024 by The WikkiMedia.
+        <a href="#" class="ms-2 text-info btn-link">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // owl slider initialize 
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        navigation: true,
+        navigationText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+        items: 3,
+        pagination: false,
+        itemsTablet: [768, 2],
+        itemsMobile: [479, 1],
+      });
+      AOS.init({
+        duration: 1000
+      })
+    });
+
+  </script>
+</body>
+
+</html>

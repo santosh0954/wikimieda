@@ -1,9 +1,391 @@
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
+$border-radius: 0.2rem;
+$accent: tomato;
+$danger: $accent;
+$primary: #303e54;
+@import "../node_modules/bootstrap/scss/bootstrap.scss",
+  "../node_modules/bootstrap/scss/functions";
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
 
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+::selection {
+  @extend .bg-primary-subtle, .text-primary;
+}
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #f1f1f1;
+  font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 100%;
+  color: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.navbar-brand {
+  font-family: Fredoka;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+.btn-danger {
+  color: rgba(255, 255, 255, 0.911);
+  &:hover,
+  &:active,
+  &:focus {
+    color: $white;
+  }
+}
+.btn-link {
+  text-decoration: none;
+  padding: 0 0 3px;
+  border: 0;
+  @extend .border-bottom;
+  border-color: transparent !important;
+  transition: all 0.2s;
+  &:hover {
+    @extend .border-bottom;
+    @extend .border-info;
+  }
+}
+.bg-black-50 {
+  background-color: rgba($color: #000000, $alpha: 0.5);
+}
+
+.text-accent {
+  color: $accent;
+}
+
+.container {
+  max-width: 1220px !important;
+}
+
+.btn-outline-danger:hover,
+.btn-outline-danger:active {
+  color: $white;
+}
+
+.navbar {
+  .searchForm {
+    position: static;
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 500px;
+    }
+  }
+  .hideMenu {
+    opacity: 1;
+    transition: opacity 0.2s;
+    @media screen and (min-width: 768px) {
+      opacity: 0 !important;
+    }
+  }
+  .dropdown-item {
+    transition: all 0.2s;
+    @extend .small, .fw-medium;
+  }
+
+  .dropdown-menu {
+    animation: slideDown 0.3s ease;
+  }
+
+  .nav-link:hover,
+  .active,
+  .active .nav-link,
+  .nav-link:focus,
+  .dropdown-item:hover {
+    color: $danger;
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item.active {
+    background: $light;
+    @extend .ps-4;
+  }
+}
+.todayHoliday {
+  &::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 50%;
+  }
+  &::-webkit-scrollbar-track {
+    background: $light;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $secondary-bg-subtle;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: $danger;
+  }
+}
+
+.carousel {
+  .carousel-item {
+    max-height: 400px;
+  }
+  img {
+    aspect-ratio: 7 / 9;
+    @include media-breakpoint-up(sm) {
+      aspect-ratio: 9 / 7;
+    }
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    height: 50px !important;
+    top: 50%;
+    margin-top: -25px;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+  }
+}
+
+.todayHoliday {
+  z-index: 100;
+  a {
+    transition: all 0.2s;
+    &:hover {
+      text-decoration: underline;
+      color: $danger;
+    }
+  }
+  li:last-child {
+    margin-bottom: 75px !important;
+  }
+}
+
+// month section here
+.month {
+  .month__item {
+    @extend .shadow-sm;
+    height: 150px;
+    background-size: cover;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      transform: translateY(-10px);
+      @extend .shadow;
+    }
+
+    p {
+      background-color: rgba(0, 0, 0, 0.3);
+      text-shadow: 2px 2px 1px rgba($color: #000000, $alpha: 0.9);
+    }
+  }
+}
+
+.reviews,
+.gifts {
+  .h5 {
+    font-weight: 600;
+  }
+  img {
+    aspect-ratio: 7 / 4;
+    object-fit: cover;
+  }
+}
+
+// post page style
+.submitIdea {
+  transition: all 0.2s;
+  &:hover {
+    transform: translateY(-5px);
+    @extend .shadow;
+  }
+}
+.page-menu {
+  width: 100%;
+  overflow-x: auto;
+  .nav-link {
+    transition: all 0.2s;
+    @extend .border, .border-white;
+
+    &:hover,
+    &:active,
+    &.active {
+      color: $info;
+      @extend .shadow-sm, .rounded-pill, .border, .border-info;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    height: 5px;
+    border-radius: 50%;
+  }
+  &::-webkit-scrollbar-track {
+    background: $light;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $secondary-bg-subtle;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: $danger;
+  }
+}
+.post-body {
+  line-height: 2;
+  .darkHighlight {
+    margin: 0 -0.75rem;
+  }
+  .accordion {
+    h1,
+    h2,
+    h3 {
+      font-family: Poppins;
+    }
+    button {
+      @extend .fs-6;
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: transparent !important;
+      color: $danger;
+    }
+  }
+}
+.timeline {
+  @extend .d-flex, .position-relative, .flex-column;
+  & > section {
+    position: relative;
+    @extend .mb-4, .mt-4, .w-100, .ps-3;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10%;
+      width: 20px;
+      height: 20px;
+      @extend .bg-info, .rounded-circle;
+    }
+    & > div {
+      position: relative;
+    }
+
+    @include media-breakpoint-up(sm) {
+      width: 50% !important;
+    }
+  }
+  .label {
+    position: absolute;
+    top: 0;
+    margin-top: -1rem;
+  }
+  & > section:nth-child(even) {
+    @extend .ms-3;
+    align-self: flex-end;
+    .label {
+      left: 0;
+      @extend .ms-3;
+    }
+    &::after {
+      left: 0;
+      margin-left: -10px;
+    }
+  }
+  & > section:nth-child(odd) {
+    @include media-breakpoint-up(sm) {
+      padding-right: 0.75rem;
+      margin-right: 0.75rem !important;
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+      text-align: right;
+    }
+    .label {
+      left: 0;
+      @extend .ms-3;
+      @include media-breakpoint-up(sm) {
+        right: 0;
+        left: auto;
+        margin-right: 0.75rem;
+        margin-left: 0;
+      }
+    }
+    &::after {
+      left: 0;
+      margin-left: -11px;
+      @include media-breakpoint-up(sm) {
+        left: auto !important;
+        right: 0 !important;
+        margin-right: -11px;
+      }
+    }
+  }
+  &::after {
+    content: "";
+
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @extend .border, .border-info;
+    @include media-breakpoint-up(sm) {
+      left: 50% !important;
+    }
+  }
+}
+
+.calendar_wrapper {
+  @extend .bg-primary, .text-white;
+  .btn {
+    line-height: normal;
+  }
+  .calendar {
+    text-align: center;
+    .days li:not(.inactive) {
+      cursor: pointer;
+      &:hover {
+        @extend .text-danger;
+      }
+    }
+  }
+  ul {
+    @extend .d-flex, .list-unstyled, .flex-wrap;
+    li {
+      flex: calc(100% / 7);
+      transition: all 0.2s;
+      a {
+        transition: all 0.2s;
+        @extend .py-2, .d-block;
+      }
+    }
+  }
+  .active {
+    border: 1px dotted $danger;
+    @extend .text-danger, .fw-medium;
+  }
+  .inactive {
+    @extend .text-white-50, .fw-light;
+  }
+}
+.owl-carousel img {
+  aspect-ratio: 9/7;
+  object-fit: cover;
 }

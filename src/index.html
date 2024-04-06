@@ -1,13 +1,842 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WikiMieda | A blog site </title>
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-  <h1 class="text-primary">Hello world!</h1>
-  <script src="js/main.js"></script>
-</body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WikiMieda | A blog site</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="./img/favicons/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+                                          rel="stylesheet" /> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+<body class="bg-white">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary shadow-sm mb-3 fw-semibold">
+      <div class="container-fluid container justify-content-between">
+        <a class="navbar-brand fw-bold fs-4" href="./"><span class="text-danger">Wikki</span>media</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
+          <ul class="navbar-nav small mx-auto mb-2 mb-lg-0 text-uppercase menu">
+            <li class="nav-item">
+              <a class="nav-link" href="./post.html">Today</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="./post.html" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Birthday
+                <i class="fa fa-chevron-down fw-light"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./post.html">January</a></li>
+                <li><a class="dropdown-item" href="./post.html">February</a></li>
+                <li><a class="dropdown-item" href="./post.html">March</a></li>
+                <li><a class="dropdown-item" href="./post.html">April</a></li>
+                <li><a class="dropdown-item" href="./post.html">May</a></li>
+                <li><a class="dropdown-item" href="./post.html">Jun</a></li>
+                <li><a class="dropdown-item" href="./post.html">July</a></li>
+                <li><a class="dropdown-item" href="./post.html">August</a></li>
+                <li><a class="dropdown-item" href="./post.html">September</a></li>
+                <li><a class="dropdown-item" href="./post.html">October</a></li>
+                <li><a class="dropdown-item" href="./post.html">November</a></li>
+                <li><a class="dropdown-item" href="./post.html">December</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Holiday
+                <i class="fa fa-chevron-down fw-light"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Animals</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Arts & Entertainment</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Cause</a></li>
+                <li><a class="dropdown-item" href="#">Cultural</a></li>
+                <li><a class="dropdown-item" href="#">Fedral</a></li>
+                <li><a class="dropdown-item" href="#">Food & Beverage</a></li>
+                <li><a class="dropdown-item" href="#">Health</a></li>
+                <li><a class="dropdown-item" href="#">Relationships</a></li>
+                <li><a class="dropdown-item" href="#">September</a></li>
+                <li><a class="dropdown-item" href="#">Religious</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Special interest</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Month
+                <i class="fa fa-chevron-down fw-light"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">January</a></li>
+                <li><a class="dropdown-item" href="#">February</a></li>
+                <li><a class="dropdown-item" href="#">March</a></li>
+                <li><a class="dropdown-item" href="#">April</a></li>
+                <li><a class="dropdown-item" href="#">May</a></li>
+                <li><a class="dropdown-item" href="#">Jun</a></li>
+                <li><a class="dropdown-item" href="#">July</a></li>
+                <li><a class="dropdown-item" href="#">August</a></li>
+                <li><a class="dropdown-item" href="#">September</a></li>
+                <li><a class="dropdown-item" href="#">October</a></li>
+                <li><a class="dropdown-item" href="#">November</a></li>
+                <li><a class="dropdown-item" href="#">December</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Create a Holiday</a>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-end flex-column flex-md-row align-items-end align-items-lg-center">
+            <a href="./login.html" class="btn order-0 btn-outline-danger border-1 px-3 rounded-pill me-2 mb-2 mb-md-0">Login</a>
+            <form class="searchForm input-group end-0 me-md-5 d-none overflow-hidden order-2 order-md-1" role="search"
+              id="search-input">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn bg-white order-1 order-md-2" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <button class="btn text-white" id="toggle-search">
+              <i class="fa fa-search"></i>
+            </button>
+            </div>
+            </div>
+            </div>
+            </nav>
+            </header>
+            <main class="container pb-5">
+    <section class="row mb-5 g-3 overflow-x-hidden">
+      <!-- carousel section start -->
+      <div class="col-md-7 col-lg-8" data-aos="fade-right">
+        <section id="carouselMain" class="carousel slide">
+          <div class="carousel-inner shadow-sm rounded overflow-hidden">
+            <div class="carousel-item active h-100">
+              <img src="./img/national-goof-off-day-1200x834.jpg.webp" class="d-block w-100 object-fit-cover"
+                alt="carousel image" />
+              <div class="carousel-caption d-flex justify-content-center align-items-center">
+                <h5 class="text-uppercase fs-3 fw-bold px-4 px-lg-2">
+                  Independent accomdation day
+                </h5>
+                <span
+                  class="px-3 py-1 bg-white text-danger position-absolute start-0 top-0 fw-medium fs-6 m-3 shadow-sm rounded">
+                  FEATURED
+                </span>
+                <span
+                  class="text-start px-3 py-1 bg-danger text-white position-absolute end-0 top-0 fw-medium fs-5 m-3 shadow-sm rounded"
+                  style="line-height: 1.2">
+                  <small class="d-block fw-light small">SUN</small>
+                  March 27
+                </span>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <img src="./img/national-goof-off-day-1200x834.jpg.webp" class="d-block w-100" alt="carousel image" />
+              <div class="carousel-caption d-flex justify-content-center align-items-center">
+                <h5 class="text-uppercase fs-3 fw-bold px-4 px-lg-2">
+                  Independent accomdation day
+                </h5>
+                <span
+                  class="px-3 py-1 bg-white text-danger position-absolute start-0 top-0 fw-medium fs-6 m-3 shadow-sm rounded">
+                  FEATURED
+                </span>
+                <span
+                  class="text-start px-3 py-1 bg-danger text-white position-absolute end-0 top-0 fw-medium fs-5 m-3 shadow-sm rounded"
+                  style="line-height: 1.2">
+                  <small class="d-block fw-light small">SUN</small>
+                  March 27
+                </span>
+              </div>
+            </div>
+            <div class="carousel-item h-100">
+              <img src="./img/national-goof-off-day-1200x834.jpg.webp" class="d-block w-100" alt="carousel image" />
+              <div class="carousel-caption d-flex justify-content-center align-items-center">
+                <h5 class="text-uppercase fs-3 fw-bold px-4 px-lg-2">
+                  Independent accomdation day
+                </h5>
+                <span
+                  class="px-3 py-1 bg-white text-danger position-absolute start-0 top-0 fw-medium fs-6 m-3 shadow-sm rounded">
+                  FEATURED
+                </span>
+                <span
+                  class="text-start px-3 py-1 bg-danger text-white position-absolute end-0 top-0 fw-medium fs-5 m-3 shadow-sm rounded"
+                  style="line-height: 1.2">
+                  <small class="d-block fw-light small">SUN</small>
+                  March 27
+                </span>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselMain" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </section>
+      </div>
+      <!-- carousel section end -->
+      <div class="col-md-5 col-lg-4 bg-white rounded shadow-sm p-0 rounded position-relative overflow-hidden"
+        style="min-height: 70px;" data-aos="fade-left">
+        <div class="bg-danger text-white p-2 mb-2 d-none d-md-block">
+          <h4 class="text-center fw-medium mb-0">Today’s holidays</h4>
+        </div>
+        <section class="bg-light mx-2 p-1 overflow-y-auto d-none d-md-block todayHoliday" style="height: 266px;">
+          <ul class="list-group list-group-flush small">
+            <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
+              <span>
+                <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="post image"
+                  style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
+              </span>
+              <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold"> AUTISM ACCEPTANCE WEEK </a>
+            </li>
+            <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
+              <span>
+                <img src="./img/posts/17-Year-Olds-min-629x360.png.webp" alt="post image"
+                  style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
+              </span>
+              <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold"> AMERICAN RED CROSS GIVING DAY </a>
+            </li>
+            <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
+              <span>
+                <img src="./img/posts/20-Year-Olds-min-629x360.png.webp" alt="post image"
+                  style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
+              </span>
+              <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold"> CELEBRATE EXCHANGE DAY </a>
+            </li>
+            <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
+              <span>
+                <img src="./img/posts/4-Year-Old-Boys-1-629x360.png.webp" alt="post image"
+                  style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
+              </span>
+              <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold">HOLY WEDNESDAY </a>
+            </li>
+            <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
+              <span>
+                <img src="./img/posts/8-Year-Old-Girls-min-629x360.png.webp" alt="post image"
+                  style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
+              </span>
+              <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold"> INTERNATIONAL WHISKEY DAY </a>
+            </li>
+            <li class="list-group-item position-relative d-flex align-items-center border-0 mb-1 shadow-sm">
+              <span>
+                <img src="./img/posts/9-Year-Old-Boys-min-629x360.png.webp" alt="post image"
+                  style="width: 40px; height: 40px" class="object-fit-cover rounded-circle" />
+              </span>
+              <a href="" class="stretched-link ms-2 ms-lg-3 fw-semibold"> LITTLE RED WAGON DAY </a>
+            </li>
+          </ul>
+        </section>
+        <div class="position-absolute bottom-0 start-0 w-100 py-3 bg-white text-center">
+          <a href="./post.html" class="btn btn-outline-danger fw-medium border-2 rounded-pill">
+            VIEW TODAY'S HOLIDAY
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- months section start  -->
+    <section class="month mb-5" data-aos="fade-up">
+      <h3 class="mb-4 text-info fw-bold text-uppercase">Months</h3>
+      <div class="row g-3">
+        <section class="col-sm-4 col-lg-2">
+          <div class="month__item rounded-5 overflow-hidden position-relative"
+            style="background: url(./img/months/March.jpg) no-repeat center">
+            <p
+              class="h4 fw-medium text-white position-absolute w-100 h-100 top-0 start-0 d-flex flex-column align-items-center justify-content-center text-center">
+              MARCH <span class="small">Holidays</span>
+            </p>
+          </div>
+        </section>
+        <section class="col-sm-4 col-lg-2">
+          <div class="month__item rounded-5 overflow-hidden position-relative"
+            style="background: url(./img/months/April.jpg) no-repeat center">
+            <p
+              class="h4 fw-medium text-white position-absolute w-100 h-100 top-0 start-0 d-flex flex-column align-items-center justify-content-center text-center">
+              APRIL <span class="small">Holidays</span>
+            </p>
+          </div>
+        </section>
+        <section class="col-sm-4 col-lg-2">
+          <div class="month__item rounded-5 overflow-hidden position-relative"
+            style="background: url(./img/months/May.jpg) no-repeat center">
+            <p
+              class="h4 fw-medium text-white position-absolute w-100 h-100 top-0 start-0 d-flex flex-column align-items-center justify-content-center text-center">
+              MAY <span class="small">Holidays</span>
+            </p>
+          </div>
+        </section>
+        <section class="col-sm-4 col-lg-2">
+          <div class="month__item rounded-5 overflow-hidden position-relative"
+            style="background: url(./img/months/June.jpg) no-repeat center">
+            <p
+              class="h4 fw-medium text-white position-absolute w-100 h-100 top-0 start-0 d-flex flex-column align-items-center justify-content-center text-center">
+              JUNE <span class="small">Holidays</span>
+            </p>
+          </div>
+        </section>
+        <section class="col-sm-4 col-lg-2">
+          <div class="month__item rounded-5 overflow-hidden position-relative"
+            style="background: url(./img/months/July.jpg) no-repeat center">
+            <p
+              class="h4 fw-medium text-white position-absolute w-100 h-100 top-0 start-0 d-flex flex-column align-items-center justify-content-center text-center">
+              JULY <span class="small">Holidays</span>
+            </p>
+          </div>
+        </section>
+        <section class="col-sm-4 col-lg-2">
+          <div class="month__item rounded-5 overflow-hidden position-relative"
+            style="background: url(./img/months/August.jpg) no-repeat center">
+            <p
+              class="h4 fw-medium text-white position-absolute w-100 h-100 top-0 start-0 d-flex flex-column align-items-center justify-content-center text-center">
+              AUGUST <span class="small">Holidays</span>
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- months section end  -->
+    
+    <!-- upcomming holidays section start  -->
+    <section class="mb-4" data-aos="fade-up">
+      <h3 class="text-info fw-bold text-uppercase mb-3">
+        Upcomming Holidays
+      </h3>
+      <div class="row">
+        <section class="col-sm-6 col-md-3">
+          <div class="card border-0 overflow-hidden">
+            <div class="position-absolute start-0 top-0 bg-danger text-white h5 p-2 text-uppercase rounded-bottom">
+              <span class="small fw-light d-block">Wed</span>
+              March 27
+            </div>
+            <img src="./img/posts/Manatee-Appreciation-Day-1-640x514.jpg" alt="post image" class="card-img-top" />
+            <div class="card-body ps-0">
+              <h6 class="card-title text-info">MANATEE APPRECIATION DAY</h6>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+        </section>
+        <section class="col-sm-6 col-md-3">
+          <div class="card border-0 overflow-hidden">
+            <div class="position-absolute start-0 top-0 bg-danger text-white h5 p-2 text-uppercase rounded-bottom">
+              <span class="small fw-light d-block">Wed</span>
+              March 27
+            </div>
+            <img src="./img/posts/national-spanish-paella-day-640x514.jpg" alt="post image" class="card-img-top" />
+            <div class="card-body ps-0">
+              <h6 class="card-title text-info">
+                NATIONAL SPANISH PAELLA DAY
+              </h6>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+        </section>
+        <section class="col-sm-6 col-md-3">
+          <div class="card border-0 overflow-hidden">
+            <div class="position-absolute start-0 top-0 bg-danger text-white h5 p-2 text-uppercase rounded-bottom">
+              <span class="small fw-light d-block">Wed</span>
+              March 27
+            </div>
+            <img src="./img/posts/maundy-640x514.jpg" alt="post image" class="card-img-top" />
+            <div class="card-body ps-0">
+              <h6 class="card-title text-info">MAUNDY THURSDAY</h6>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+        </section>
+        <section class="col-sm-6 col-md-3">
+          <div class="card border-0 overflow-hidden">
+            <div class="position-absolute start-0 top-0 bg-danger text-white h5 p-2 text-uppercase rounded-bottom">
+              <span class="small fw-light d-block">Wed</span>
+              March 27
+            </div>
+            <img src="./img/posts/respect-your-cat-day-640x514.jpg.webp" alt="post image" class="card-img-top" />
+            <div class="card-body ps-0">
+              <h6 class="card-title text-info">RESPECT YOUR CAT DAY</h6>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <button class="ms-auto d-block btn btn-outline-info fw-medium">
+        See More <i class="fa fa-chevron-right"></i><a href="#"> </a>
+      </button>
+    </section>
+    <!-- upcomming holidays section end  -->
+    
+    <!-- Reviews section start  -->
+    <section class="reviews mb-5" data-aos="fade-up">
+      <h3 class="text-info fw-bold text-uppercase mb-3">Reviews</h3>
+      <div class="row g-4">
+        <section class="col-sm-6">
+          <div class="position-relative">
+            <img src="./img/posts/Untitled-design-4-629x360.webp" alt="review image" class="img-fluid rounded" />
+            <a href="#" class="stretched-link"><span class="h5 mt-2 d-block">The Best Canned Cocktails for
+                2023</span></a>
+          </div>
+        </section>
+        <section class="col-sm-6">
+          <div class="position-relative">
+            <img src="./img/posts/BeFunky-collage-8-1-629x360.jpg" alt="review image" class="img-fluid rounded" />
+            <a href="#" class="stretched-link"><span class="h5 mt-2 d-block">The Best Respirator Mask for Smoke and Dust
+                of 2023</span></a>
+          </div>
+        </section>
+        <section class="col-sm-6 col-md-3">
+          <div class="position-relative">
+            <img src="./img/posts/BeFunky-collage-3-3-629x360.jpg" alt="review image" class="img-fluid rounded" />
+            <a href="#" class="stretched-link"><span class="h5 mt-2 d-block">The Best Travel Power Strip of
+                2023</span></a>
+          </div>
+        </section>
+        <section class="col-sm-6 col-md-3">
+          <div class="position-relative">
+            <img src="./img/posts/BeFunky-collage-11-1-629x360.jpg" alt="review image" class="img-fluid rounded" />
+            <a href="#" class="stretched-link"><span class="h5 mt-2 d-block">The Best Small Saucepan of 2023</span></a>
+          </div>
+        </section>
+        <section class="col-sm-6 col-md-3">
+          <div class="position-relative">
+            <img src="./img/posts/image8-1-541x360.png" alt="review image" class="img-fluid rounded" />
+            <a href="#" class="stretched-link"><span class="h5 mt-2 d-block">The Best String Trimmer for 2023</span></a>
+          </div>
+        </section>
+        <section class="col-sm-6 col-md-3">
+          <div class="position-relative">
+            <img src="./img/posts/BeFunky-collage-1-6-629x360.jpg.webp" alt="review image" class="img-fluid rounded" />
+            <a href="#" class="stretched-link"><span class="h5 mt-2 d-block">The Best Blood Glucose Meter of
+                2023</span></a>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- Reviews section end  -->
+    
+    <!-- Gift section start  -->
+    <section class="gifts mb-5" data-aos="fade-up">
+      <h3 class="text-info fw-bold text-uppercase mb-3">Gifts</h3>
+      <div class="row g-4">
+        <section class="col-sm-6">
+          <div class="position-relative">
+            <img src="./img/posts/17-Year-Olds-min-629x360.png.webp" alt="review image" class="img-fluid rounded" />
+            <a href="#" class="stretched-link"><span class="h5 mt-2 d-block">90 Gifts for 17 Year Olds</span></a>
+          </div>
+        </section>
+        <section class="col-sm-6">
+          <div class="position-relative">
+            <img src="./img/posts/8-Year-Old-Girls-min-629x360.png.webp" alt="review image" class="img-fluid rounded" />
+            <a href="#" class="stretched-link"><span class="h5 mt-2 d-block">64 Toys for 8 Year Old Girls</span></a>
+          </div>
+        </section>
+        <section class="col-sm-6 col-md-3">
+          <div class="position-relative">
+            <img src="./img/posts/15-Year-Olds-min-629x360.png.webp" alt="review image" class="img-fluid rounded" />
+            <a href="#" class="stretched-link"><span class="h5 mt-2 d-block">114 Gifts for 15 Year Olds</span></a>
+          </div>
+        </section>
+        <section class="col-sm-6 col-md-3">
+          <div class="position-relative">
+            <img src="./img/posts/9-Year-Old-Boys-min-629x360.png.webp" alt="review image" class="img-fluid rounded" />
+            <a href="#" class="stretched-link"><span class="h5 mt-2 d-block">85 Toys for 9 Year Old Boys</span></a>
+          </div>
+        </section>
+        <section class="col-sm-6 col-md-3">
+          <div class="position-relative">
+            <img src="./img/posts/20-Year-Olds-min-629x360.png.webp" alt="review image" class="img-fluid rounded" />
+            <a href="#" class="stretched-link"><span class="h5 mt-2 d-block">93 Gifts for 20 Year Olds</span></a>
+          </div>
+        </section>
+        <section class="col-sm-6 col-md-3">
+          <div class="position-relative">
+            <img src="./img/posts/4-Year-Old-Boys-1-629x360.png.webp" alt="review image" class="img-fluid rounded" />
+            <a href="#" class="stretched-link"><span class="h5 mt-2 d-block">102 Toys for 4 Year Old Boys</span></a>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- Gift section end  -->
+    
+    <!-- Newsletter section start  -->
+    <section class="bg-info text-white text-center p-3 p-md-5" style="margin-top: 6rem" data-aos="fade-up">
+      <div style="max-width: 800px" class="mx-auto">
+        <h6 class="display-6 fw-medium">Never miss your favorite moments!</h6>
+        <p class="lead">Sign up now to save your favorite holidays.</p>
+        <p class="lead">
+          Plus receive a monthly newsletter with the most exciting upcoming
+          holidays, deals, and celebration ideas.
+        </p>
+        <button class="btn btn-danger d-block mx-auto btn-lg px-4 text-uppercase">
+          <a href="#">Sign Up</a>
+        </button>
+      </div>
+    </section>
+    <!-- Newsletter section end  -->
+    </main>
+    
+    <footer class="bg-primary text-white pt-5">
+      <div class="container">
+        <div class="row g-3">
+          <section class="col-sm-6 col-md-3">
+            <ul class="list-group list-group-sm mb-3">
+              <li class="list-group-item p-0 mb-3 border-0 bg-transparent text-white d-flex">
+                <span class="rounded-circle bg-white text-primary d-flex justify-content-center align-items-center"
+                  style="width: 50px; height: 50px">
+                  <i class="fa fa-sun-o fa-2x"></i>
+                </span>
+                <span class="ps-3">
+                  6200 <br />
+                  Days Celebrated
+                </span>
+              </li>
+              <li class="list-group-item p-0 mb-3 border-0 bg-transparent text-white d-flex">
+                <span class="rounded-circle bg-white text-primary d-flex justify-content-center align-items-center"
+                  style="width: 50px; height: 50px">
+                  <i class="fa fa-gift fa-2x"></i>
+                </span>
+                <span class="ps-3">
+                  19200 <br />
+                  Ways to Celebrate
+                </span>
+              </li>
+              <li class="list-group-item p-0 mb-3 border-0 bg-transparent text-white d-flex">
+                <span class="rounded-circle bg-white text-primary d-flex justify-content-center align-items-center"
+                  style="width: 50px; height: 50px">
+                  <i class="fa fa-users fa-2x"></i>
+                </span>
+                <span class="ps-3">
+                  10,00,00+ <br />
+                  Happy Users
+                </span>
+              </li>
+            </ul>
+          </section>
+          <section class="col-sm-6 col-md-3">
+            <span class="d-block mb-2 fs-5"> ABOUT US </span>
+            <ul class="list-group list-group-sm mb-3">
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">Our Mission</a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">Our Story</a>
+              </li>
+            </ul>
+            <span class="d-block mb-2 fs-5"> RESOURCES </span>
+            <ul class="list-group list-group-sm mb-3">
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  For Businesses
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  For Journalist
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> For Brands </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  For Influencers
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> For FAQ's </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> News </a>
+              </li>
+            </ul>
+            <span class="d-block mb-2 fs-5"> CONTACT US </span>
+            <ul class="list-group list-group-sm mb-3">
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  Submit a Event
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  Promote an Event
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  Work With Us
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  Submit an Error
+                </a>
+              </li>
+            </ul>
+            <span class="d-block mb-2 fs-5"> OUR SERVICES </span>
+            <ul class="list-group list-group-sm mb-3">
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  Create a Holiday
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  Sponsor a Holiday
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  Data Licensing
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="col-sm-6 col-md-3">
+            <span class="d-block mb-2 fs-5"> MONTHS </span>
+            <ul class="list-group list-group-sm mb-3">
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> January </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> February </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> March </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> April </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> May </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> June </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> July </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> August </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> September </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> October </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> November </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> December </a>
+              </li>
+            </ul>
+            <span class="d-block mb-2 fs-5"> UPCOMMING </span>
+            <ul class="list-group list-group-sm mb-3">
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> Today </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">Tomorrow</a>
+              </li>
+            </ul>
+            <span class="d-block mb-2 fs-5"> ALL MONTHS </span>
+            <ul class="list-group list-group-sm mb-3">
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  Wikkimedia Calendar
+                </a>
+              </li>
+            </ul>
+            <span class="d-block mb-2 fs-5"> GIFTS </span>
+            <ul class="list-group list-group-sm mb-3">
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  Reviews and Gift guid
+                </a>
+              </li>
+            </ul>
+            <span class="d-block mb-2 fs-5"> BLOG </span>
+            <ul class="list-group list-group-sm mb-3">
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> Blog Home </a>
+              </li>
+            </ul>
+          </section>
+          <section class="col-sm-6 col-md-3">
+            <span class="d-block mb-2 fs-5"> SHOPPING REVIEWS </span>
+            <ul class="list-group list-group-sm mb-3">
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> Baby </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> Car </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> Children </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  Health & Fitness
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  Home & Garden
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> Kitchen </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> Pets </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> Sleep </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> Tech </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> Travel </a>
+              </li>
+            </ul>
+            <span class="d-block mb-2 fs-5"> GIFT GUIDES </span>
+            <ul class="list-group list-group-sm mb-3">
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> By Age </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  By Interest
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  By Occasion
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#"> By Price </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  By Recipient
+                </a>
+              </li>
+            </ul>
+            <span class="d-block mb-2 fs-5"> POPPULAR HOLIDAYS </span>
+            <ul class="list-group list-group-sm mb-3">
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  National Girlfriend Day
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  Day of the Dead
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  National Boyfriend Day
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  National Sons Day
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  National Independence Day
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  National Pride Day
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  National Best Friend Day
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  National Daughter Day
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  World Bicyle Day
+                </a>
+              </li>
+              <li class="list-group-item p-0 border-0 bg-transparent mb-1">
+                <a class="fw-light btn-link text-info" href="#">
+                  National Dog Day
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <hr />
+        <div class="row pt-3 g-3">
+          <section class="col-sm-8">
+            <span class="h6 mb-3 d-block">ABOUT WIKKIMEDIA</span>
+            <p class="fw-light">
+              We keep track of fun holidays and special moments on the cultural
+              calendar — giving you exciting activities, deals, local events,
+              brand promotions, and other exciting ways to celebrate.
+            </p>
+          </section>
+          <section class="col-sm-4 text-center mb-3">
+            <span class="h6 mb-3 d-block">Follow us on</span>
+            <a href="#" class="m-2">
+              <i class="fa fa-facebook-f fa-2x"></i>
+            </a>
+            <a href="#" class="m-2">
+              <i class="fa fa-instagram fa-2x"></i>
+            </a>
+            <a href="#" class="m-2">
+              <i class="fa fa-twitter fa-2x"></i>
+            </a>
+          </section>
+        </div>
+      </div>
+      <div class="mb-0 py-3 bg-black-50">
+        <div class="container">
+          Copyright &copy; 2024 by The WikkiMedia.
+          <a href="#" class="ms-2 text-info btn-link">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      AOS.init({ duration: 1000 });
+
+    })
+  </script>
+  </body>
+
 </html>
